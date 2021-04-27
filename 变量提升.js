@@ -52,4 +52,12 @@ test(1)
 var s = function g(){}
 // g是只读的，g只能在函数的内部访问  g相当于一个表达式，函数体？？？
 
-  
+// 5\
+function test(){console.log(1)}
+(function() {
+    if(false) {
+function test(){console.log(2)}
+    }
+console.log(test)
+})()
+// undefined if() 函数提升的特殊性

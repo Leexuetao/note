@@ -60,3 +60,22 @@ var f = s.a.bind(this)
 new f() // NaN  1+undefined = NaN
 var p = s.b.bind(this)
 new p() // 报错TypeError: p is not a constructor 简写形式当函数不可以被new,箭头函数也不可以被new
+
+
+// 4
+function C1(name) {
+  if (name) this.name = name
+}
+
+function C2(name) {
+  this.name = name
+}
+
+function C3(name) {
+  this.name = name || 'name'
+}
+C1.prototype.name = '1'
+C2.prototype.name = '2'
+C3.prototype.name = '3'
+
+console.log(new C1().name + new C2().name + new C3().name) // 1undefinedname
