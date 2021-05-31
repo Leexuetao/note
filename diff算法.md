@@ -1,3 +1,25 @@
+# 概念
+
++ template
++ 渲染函数
++ vnode(virtual dom)
++ patch(diff算法)
++ view
+
++ vue.js通过编译template模板转换成渲染函（render),执行渲染函数就可以得到一个虚拟节点树
++ VNode虚拟节点：它可以代表一个真实的dom节点。通过createElement方法能将VNode渲染成dom节点。简单地说，vnode可以理解成节点描述对象，它描述了应该怎样去创建真实的DOM节点
++ patch(也叫做patching算法)：虚拟DOM最核心的部分，它可以将vnode渲染成真实的DOM,这个过程是对比新旧虚拟节点之间有哪些不同，然后根据对比结果找出需要更新的节点进行更新。
+
+
+
+
+
+
+
+
+
+
+
 # 一、diff算法
 + Diff算法是一种通过同层的树节点进行比较的高效算法，避免对树的逐层遍历，减少时间复杂度。diff算法在很多场景下都有用，比如vue虚拟dom渲染生成真实dom的新旧VNode
 + diff算法两个特点
