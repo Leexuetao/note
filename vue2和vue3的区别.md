@@ -563,6 +563,8 @@ Vue3中组件上
 + 新增：现在可以自定义v-model修饰符 
 
 
+## 7、组件事件现在需要在emits选项中声明
+
 ## 其他改变
 ### v-if与v-for的优先级
 Vue2中
@@ -716,10 +718,10 @@ function reactive(data) {
 ## 总结
 1. CompositionAPI:Vue3新增组合式API
   + 可以与现有的options API一起使用
-  + 灵活的逻辑组合与复用
+  + 灵活的逻辑组合与复用,降低耦合，简化逻辑
 
 2. Teleport 传送门 
-  + 允许我们控制在 DOM 中哪个父节点下渲染了 HTML
+  + 允许我们控制在 DOM 中哪个父节点下渲染了 HTML,新特性重构挂载类组件
 
 3. Fragment 片段
   + 不再限于模板中的单个根节点
