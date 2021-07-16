@@ -61,3 +61,16 @@ function test(){console.log(2)}
 console.log(test)
 })()
 // undefined if() 函数提升的特殊性
+
+
+// 6
+var a = 0
+if (true) {
+  a = 10
+  console.log(a, window.a) // 10, 0
+  function a() {}
+  console.log(a, window.a) // 10, 10
+  a = 20
+  console.log(a, window.a) // 20, 10
+}
+console.log(a, window.a) // 10, 10
